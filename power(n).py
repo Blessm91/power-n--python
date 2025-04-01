@@ -1,11 +1,5 @@
-# Recursive power function 
-def power(x, n):
-    if n == 0:
-        return 1
-    elif n % 2 == 0:
-        return power(x, n // 2) ** 2
-    else:
-        return x * power(x, n - 1)
+# Recursive power function (one-liner)
+power = lambda x, n: 1 if n == 0 else power(x, n // 2) ** 2 if n % 2 == 0 else x * power(x, n - 1)
 
 # Input handling with minimal code
 def get_input():
